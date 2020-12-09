@@ -25,7 +25,7 @@ export const actions = {
   }) {
     if (state.tags.length) return
     try {
-      let tags = await fetch(`http://wp.dillonestrada.xyz/wp-json/wp/v2/tags`)
+      let tags = await fetch(`https://wp.dillonestrada.xyz/wp-json/wp/v2/tags`)
         .then(res => res.json())
       tags = tags.map(({
         id,
@@ -45,7 +45,7 @@ export const actions = {
   }) {
     if (state.posts.length) return
     try {
-      let posts = await fetch(`http://wp.dillonestrada.xyz/wp-json/wp/v2/posts?page=1&per_page=20&categories=3&_embed`)
+      let posts = await fetch(`https://wp.dillonestrada.xyz/wp-json/wp/v2/posts?page=1&per_page=20&categories=3&_embed`)
         .then(res => res.json())
       posts = posts.filter(el => el.status === "publish")
         .map(({
