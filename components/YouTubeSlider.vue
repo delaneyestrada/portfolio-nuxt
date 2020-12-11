@@ -1,16 +1,14 @@
 <template>
-  <client-only>
-    <div class="wrapper youtube">
-      <vueper-slides bullets-outside v-if="slides.length" :slideRatio="9 / 16">
-        <vueper-slide
-          v-for="(slide, i) in slides"
-          :key="i"
-          :image="slide.image"
-          :video="slide.video.url"
-        />
-      </vueper-slides>
-    </div>
-  </client-only>
+  <div class="wrapper youtube">
+    <vueper-slides bullets-outside v-if="slides.length" :slideRatio="9 / 16">
+      <vueper-slide
+        v-for="(slide, i) in slides"
+        :key="i"
+        :image="slide.image"
+        :video="slide.video.url"
+      />
+    </vueper-slides>
+  </div>
 </template>
 
 <script>
