@@ -119,7 +119,7 @@
                           "
                         ></iframe>
                       </b-tab>
-                      <b-tab title="Bandsintown" @click="fixBit">
+                      <b-tab title="Bandsintown">
                         <b-card-text
                           >I can integrate Bandsintown to your website to keep
                           your fans updated on your shows.</b-card-text
@@ -190,13 +190,13 @@ export default {
     });
   },
   methods: {
-    fixBit() {
-      try {
-        document.querySelector(".bit-widget").classList.add("bit-layout-ipad");
-      } catch (err) {
-        console.log(err);
-      }
-    },
+    // fixBit() {
+    //   try {
+    //     document.querySelector(".bit-widget").classList.add("bit-layout-ipad");
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // },
     onResize() {
       if (process.browser) {
         this.windowWidth = window.innerWidth;

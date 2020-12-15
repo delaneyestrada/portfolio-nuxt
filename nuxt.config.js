@@ -41,10 +41,10 @@ export default {
       },
 
     ],
-    script: [{
-      charset: "utf-8",
-      src: "https://widget.bandsintown.com/main.min.js",
-    }, ]
+    // script: [{
+    //   charset: "utf-8",
+    //   src: "https://widget.bandsintown.com/main.min.js",
+    // }, ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
