@@ -65,6 +65,7 @@ export const actions = {
           tags,
           content
         }))
+      console.log(posts)
       commit("updatePosts", posts)
     } catch (err) {
       console.log(`error: ${err}`)
