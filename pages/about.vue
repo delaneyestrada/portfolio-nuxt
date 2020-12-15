@@ -157,19 +157,10 @@
 
 <script>
 import { initShopify } from "../assets/js/shopify";
-// import { initBandsintown } from "../assets/js/bandsintown";
 import YouTubeSlider from "../components/YouTubeSlider";
 
 export default {
   name: "About",
-  // head: {
-  //   script: [
-  // {
-  //   charset: "utf-8",
-  //   src: "https://widget.bandsintown.com/main.min.js",
-  // },
-  //   ],
-  // },
   data() {
     return {
       renderComponent: true,
