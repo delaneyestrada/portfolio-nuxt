@@ -168,9 +168,7 @@ export default {
   font-family: "Hoodson";
   src: local("Hoodson"), url(/Hoodson.ttf) format("truetype");
 }
-#sidebar {
-  max-width: 154px;
-}
+
 @media (min-width: 1200px) {
   #sidebar {
     font-size: 13px;
@@ -262,6 +260,8 @@ export default {
 }
 @media (min-width: 576px) {
   #sidebar {
+    max-width: 154px;
+
     display: flex;
     height: 100vh;
     position: fixed;

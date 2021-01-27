@@ -3,6 +3,21 @@
     <b-container>
       <div class="main">
         <div class="center-container">
+          <b-alert
+            :show="dismissCountDown"
+            dismissible
+            variant="warning"
+            @dismissed="dismissCountDown = 0"
+            @dismiss-count-down="countDownChanged"
+          >
+            <p>Message sent! I'll get back to you ASAP</p>
+            <b-progress
+              variant="warning"
+              :max="dismissSecs"
+              :value="dismissCountDown"
+              height="4px"
+            ></b-progress>
+          </b-alert>
           <div class="text">
             <h1>Contact Me</h1>
             <p>
@@ -43,20 +58,39 @@ export default {
         email: "",
         message: "",
       },
+      dismissSecs: 5,
+      dismissCountDown: 0,
+      showDismissibleAlert: false,
     };
   },
   methods: {
+    clearForm() {
+      (this.form.email = ""), (this.form.name = ""), (this.form.message = "");
+    },
+    countDownChanged(dismissCountDown) {
+      this.dismissCountDown = dismissCountDown;
+    },
+    showAlert() {
+      this.dismissCountDown = this.dismissSecs;
+    },
     onSubmit() {
-      axios.post("/.netlify/functions/send-email", {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        data: {
-          name: this.form.name,
-          email: this.form.email,
-          message: this.form.message,
-        },
-      });
+      axios
+        .post("/.netlify/functions/send-email", {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          data: {
+            name: this.form.name,
+            email: this.form.email,
+            message: this.form.message,
+          },
+        })
+        .then(() => {
+          this.showAlert();
+        })
+        .catch((e) => {
+          this.showAlert();
+        });
     },
   },
 };
