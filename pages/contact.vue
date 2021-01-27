@@ -1,59 +1,89 @@
 <template>
-    <div>
-        <b-container>
-            <div class="main">
-                <div class="center-container">
-                    <div class="text">
-                        <h1>Contact Me</h1>
-                        <p>Shoot me a message through the contact form below and I will get back to you ASAP.</p>
-                    </div>
-                    <b-form @submit="onSubmit">
-                        <b-form-group id="input-group-1" label="Name:" label-for="input-1">
-                            <b-form-input id="input-1" type="text" required placeholder="Enter name"></b-form-input>
-                        </b-form-group>
-                        <b-form-group id="input-group-2" label="Email address:" label-for="input-2">
-                            <b-form-input id="input-2" type="email" required placeholder="Enter email"></b-form-input>
-                        </b-form-group>
-                        <b-form-group id="input-group-3" label="Message:" label-for="input-3">
-                            <b-form-textarea id="input-3" placeholder="Enter message" rows="3" max-rows="6" required>
-                            </b-form-textarea>
-                        </b-form-group>
-                        <b-button type="submit">Submit</b-button>
-                    </b-form>
-                </div>
+  <div>
+    <b-container>
+      <div class="main">
+        <div class="center-container">
+          <div class="text">
+            <h1>Contact Me</h1>
+            <p>
+              Shoot me a message through the contact form below and I will get
+              back to you ASAP.
+            </p>
+          </div>
+          <form @submit.prevent="onSubmit">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" required type="text" v-model="form.name" />
             </div>
-        </b-container>
-    </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" required type="email" v-model="form.email" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" required rows="3" v-model="form.message" />
+            </div>
+            <b-button type="submit">Submit</b-button>
+          </form>
+        </div>
+      </div>
+    </b-container>
+  </div>
 </template>
 
 <script>
-    export default {
-        methods: {
-            onSubmit() {
-                console.log('submit')
-            }
-        }
-    }
+import axios from "axios";
+
+export default {
+  name: "Contact",
+  data() {
+    return {
+      form: {
+        name: "",
+        email: "",
+        message: "",
+      },
+    };
+  },
+  methods: {
+    onSubmit() {
+      axios.post("/.netlify/functions/send-email", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: {
+          name: this.form.name,
+          email: this.form.email,
+          message: this.form.message,
+        },
+      });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-    .main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-        .center-container {
-            max-width: 800px;
-            min-width: 300px;
-            width: 50%;
-        }
+  .center-container {
+    max-width: 800px;
+    min-width: 300px;
+    width: 50%;
+  }
 
-        .text {
-            margin-bottom: 2em;
-        }
+  .text {
+    margin-bottom: 2em;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
 
-        // form {
-            
-        // }
-    }
+  // form {
+
+  // }
+}
 </style>

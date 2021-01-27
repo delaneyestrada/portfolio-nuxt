@@ -9,13 +9,13 @@
                 <h1>About Me</h1>
               </div>
               <b-card class="mt-3">
-                <p>
+                <p class="about-text">
                   I am a full-stack web developer based in Austin, Texas with a
                   love for creating websites and apps that are user friendly,
                   fast, and search engine optimized.
                 </p>
 
-                <p>
+                <p class="about-text">
                   Also being a professional musician, I am aware of the
                   importance of tools that don't get in the way of your process;
                   and that is what I hope to provide.
@@ -32,118 +32,81 @@
                   class="sub-nav"
                 >
                   <b-tab title="Features" active>
-                    <b-tabs
-                      pills
-                      card
-                      :vertical="windowWidth <= 850 ? false : true"
-                      start
-                      active-nav-item-class="active-nav-item"
-                    >
-                      <b-tab title="Stores" active>
-                        <b-card-text
-                          >Using the ecommerce platform Shopify, I can
-                          seamlessly integrate a store into your website. No
-                          more clicking away to a whole different website for
-                          your store. Check out the test store
-                          below.</b-card-text
-                        >
-                        <div class="demo-store">
-                          <div id="collection-component-1605831560423"></div>
+                    <div id="features">
+                      <div class="features-section" id="performance">
+                        <h4>Performance</h4>
+                        <div class="feature-info">
+                          <p>
+                            I make sure that all files are the smallest size
+                            possible to decrease load times for the people
+                            visiting your website.
+                          </p>
                         </div>
-                      </b-tab>
-                      <b-tab title="Hosting">
-                        <b-card-text
-                          >With static websites, I can take care of hosting free
-                          of charge via a hosting service called
-                          <a href="https://www.netlify.com">Netlify</a>. For
-                          more demanding sites, I'll talk you through your
-                          options on a case-by-case basis.</b-card-text
-                        >
-                      </b-tab>
-                      <b-tab title="Speed">
-                        <b-card-text
-                          >Without getting too technical, I make sure file sizes
-                          are as small as possible and served in the most
-                          efficient way so that your site will run fast even on
-                          slower internet connections.</b-card-text
-                        >
-                      </b-tab>
-                    </b-tabs>
+                      </div>
+                      <div class="features-section" id="content-management">
+                        <h4>Content Management</h4>
+                        <div class="feature-info">
+                          <p>
+                            Using a CMS like Wordpress, I can design a website
+                            that will allow you to change, add, or remove
+                            content at will.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="features-section" id="ecommerce">
+                        <h4>Ecommerce</h4>
+
+                        <div class="feature-info">
+                          <p>
+                            Integrate an Ecommerce service such as Shopify or
+                            have me build a custom Ecommerce solution with
+                            payment handlers such as PayPal or Stripe.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </b-tab>
                   <b-tab title="For Musicians">
-                    <b-tabs
-                      pills
-                      card
-                      :vertical="windowWidth <= 850 ? false : true"
-                      start
-                      active-nav-item-class="active-nav-item"
-                    >
-                      <b-tab title="YouTube" active>
-                        <b-card-text
-                          >Instead of embedding individual videos haphazardly on
-                          your website, I have different techniques to make a
-                          YouTube playlist of your choice display in more
-                          creative and user-friendly ways. Check out the slide
-                          show below for an example.</b-card-text
-                        >
-                        <YouTubeSlider></YouTubeSlider>
-                      </b-tab>
-                      <b-tab title="Streaming">
-                        <b-card-text
-                          >Spotify or Apple Music integration allows your fans
-                          to easily get a taste of your music before deciding to
-                          purchase an album or follow you on the respective
-                          streaming platform.
-                        </b-card-text>
-                        <iframe
-                          src="https://open.spotify.com/embed/album/57L4MhqfDun3uimhVBXX0Z"
-                          width="300"
-                          height="380"
-                          frameborder="0"
-                          allowtransparency="true"
-                          allow="encrypted-media"
-                        ></iframe>
+                    <div class="features-section" id="bandsintown">
+                      <h4>Bandsintown</h4>
 
-                        <iframe
-                          src="https://embed.music.apple.com/us/album/dont-forget-where-you-come-from/1385723075?app=music&amp;itsct=music_box&amp;itscg=30200&amp;ct=albums_don%27t_forget_where_you_come_from&amp;ls=1"
-                          height="380px"
-                          frameborder="0"
-                          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-                          allow="autoplay *; encrypted-media *;"
-                          style="
-                            width: 100%;
-                            max-width: 300px;
-                            overflow: hidden;
-                            border-radius: 10px;
-                            background: transparent;
-                          "
-                        ></iframe>
-                      </b-tab>
-                      <b-tab title="Bandsintown">
-                        <b-card-text
-                          >I can integrate Bandsintown to your website to keep
-                          your fans updated on your shows.</b-card-text
-                        >
-                        <div class="bandsintown-demo">
+                      <div class="feature-info">
+                        <img src="@/static/bandsintownwidget.jpg" alt="" />
+
+                        <p>
+                          Integrate the
                           <a
-                            class="bit-widget-initializer"
-                            data-artist-name="Kyle Park"
-                            data-display-local-dates="false"
-                            data-display-past-dates="false"
-                            data-auto-style="false"
-                            data-text-color="#000000"
-                            data-link-color="#116afc"
-                            data-background-color="rgba(0,0,0,0)"
-                            data-display-limit="15"
-                            data-display-start-time="false"
-                            data-link-text-color="#FFFFFF"
-                            data-display-lineup="false"
-                            data-display-play-my-city="true"
-                            data-separator-color="rgba(255, 255, 255, 0.5)"
-                          ></a>
-                        </div>
-                      </b-tab>
-                    </b-tabs>
+                            href="https://artists.bandsintown.com/support/events-widget"
+                            target="_blank"
+                            >Bandsintown Widget</a
+                          >
+                          or a custom styled solution built using their API.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="features-section" id="youtube">
+                      <h4>YouTube</h4>
+                      <div class="feature-info">
+                        <img src="@/static/youtubeslider.png" alt="" />
+
+                        <p>
+                          Display as many YouTube videos you want in a creative
+                          user friendly way instead of just having them
+                          haphazardly thrown on your page.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="features-section" id="music-streaming">
+                      <h4>Music Streaming</h4>
+                      <div class="feature-info">
+                        <img src="@/static/bandsintownwidget.jpg" alt="" />
+                        <p>
+                          Get a widget from almost any streaming music provider
+                          you can think of to allow fans to preview your songs
+                          and guide them to purchase or stream your songs.
+                        </p>
+                      </div>
+                    </div>
                   </b-tab>
                 </b-tabs>
               </b-card>
@@ -156,7 +119,6 @@
 </template>
 
 <script>
-import { initShopify } from "../assets/js/shopify";
 import YouTubeSlider from "../components/YouTubeSlider";
 
 export default {
@@ -167,6 +129,7 @@ export default {
       windowWidth: process.browser ? window.innerWidth : null,
     };
   },
+
   components: {
     YouTubeSlider,
   },
@@ -185,9 +148,6 @@ export default {
         window.addEventListener("resize", this.onResize);
       });
     }
-    this.$nextTick(() => {
-      initShopify();
-    });
   },
   methods: {
     // fixBit() {
@@ -239,6 +199,39 @@ export default {
       color: lighten($dark, 20%);
     }
   }
+}
+.features-section:nth-child(odd) {
+  background-color: darken($white, 5%);
+}
+.features-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  padding: 1.5rem 0.5rem;
+  place-items: center;
+  .feature-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+
+    img {
+      max-height: 175px;
+    }
+    p {
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+  }
+  h4 {
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 800;
+    font-family: $martel;
+  }
+}
+.about-text {
+  font-size: 1rem;
 }
 </style>
 <style lang="scss">

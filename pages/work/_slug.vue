@@ -3,14 +3,18 @@
     <b-container>
       <b-row class="justify-content-center">
         <b-col md="11" v-if="post">
-          <h2>{{ post.title.rendered }}</h2>
-          <div class="content">
-            <span v-html="post.content.rendered"></span>
+          <div id="header" class="my-4">
+            <h2>{{ post.title.rendered }}</h2>
             <b-button
+              squared
               variant="primary"
               :href="removeTags(post.excerpt.rendered)"
+              class="ml-3"
               >Visit Site</b-button
             >
+          </div>
+          <div class="content">
+            <span v-html="post.content.rendered"></span>
           </div>
         </b-col>
       </b-row>
@@ -50,5 +54,17 @@ export default {
 .wp-block-image img {
   width: 100%;
   height: auto;
+}
+.project {
+  h2 {
+    font-weight: 600;
+  }
+  figure {
+    margin-top: 2rem;
+  }
+  #header {
+    display: flex;
+    align-items: center;
+  }
 }
 </style>

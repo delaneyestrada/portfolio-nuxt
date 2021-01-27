@@ -66,8 +66,12 @@
         </b-nav-item>
       </b-nav>
       <div class="social-links" v-show="windowWidth > 575">
-        <a href="#"> <font-awesome-icon :icon="['fab', 'instagram']" /></a>
-        <a href="#"> <font-awesome-icon :icon="['fab', 'github']" /></a>
+        <a href="https://www.instagram.com/dillon_estrada/" target="_blank">
+          <font-awesome-icon :icon="['fab', 'instagram']"
+        /></a>
+        <a href="https://github.com/dillonestrada" target="_blank">
+          <font-awesome-icon :icon="['fab', 'github']"
+        /></a>
       </div>
     </div>
     <div class="main" :style="mainStyle">
@@ -97,7 +101,7 @@ export default {
       if (this.windowWidth <= 575) {
         return `padding-bottom: calc(2em + ${this.sidebarHeight}px)`;
       }
-      return '';
+      return "";
     },
     windowSize() {
       if (this.windowWidth < 420) {
@@ -129,7 +133,7 @@ export default {
       this.$nextTick(() => {
         window.addEventListener("resize", this.onResize);
         this.sidebarWidth = this.$refs.sidebar.clientWidth;
-      this.sidebarHeight = this.$refs.sidebar.clientHeight;
+        this.sidebarHeight = this.$refs.sidebar.clientHeight;
       });
     }
   },
@@ -137,7 +141,7 @@ export default {
     this.$nextTick(() => {
       this.sidebarWidth = this.$refs.sidebar.clientWidth;
       this.sidebarHeight = this.$refs.sidebar.clientHeight;
-    })
+    });
   },
 
   methods: {
@@ -147,7 +151,7 @@ export default {
         this.sidebarWidth = this.$refs.sidebar.clientWidth;
         this.sidebarHeight = this.$refs.sidebar.clientHeight;
       }
-    }
+    },
   },
 };
 </script>
@@ -163,6 +167,9 @@ export default {
 @font-face {
   font-family: "Hoodson";
   src: local("Hoodson"), url(/Hoodson.ttf) format("truetype");
+}
+#sidebar {
+  max-width: 154px;
 }
 @media (min-width: 1200px) {
   #sidebar {
@@ -259,7 +266,6 @@ export default {
     height: 100vh;
     position: fixed;
     top: 0;
-
     flex-direction: column;
     // border-right: 1px solid hsla(37, 100%, 50%, 0.295);
     justify-content: center;
