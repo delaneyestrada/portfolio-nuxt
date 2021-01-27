@@ -27,7 +27,55 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: ""
+        content:
+          "I am a full-stack web developer based in Austin, Texas with a love for creating websites and apps that are user friendly, fast, and search engine optimized."
+      },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: "Dillon Estrada - Web Developer & Designer"
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content:
+          "I am a full-stack web developer based in Austin, Texas with a love for creating websites and apps that are user friendly, fast, and search engine optimized."
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: "https://www.dillonestrada.com/dewebdev.png"
+      },
+      {
+        hid: "twitter:image:alt",
+        name: "twitter:image:alt",
+        content: "Dillon Estrada - Web Developer & Designer"
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Dillon Estrada - Web Developer & Designer"
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content:
+          "I am a full-stack web developer based in Austin, Texas with a love for creating websites and apps that are user friendly, fast, and search engine optimized."
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "https://www.dillonestrada.com/dewebdev.png"
+      },
+      {
+        hid: "og:image:secure_url",
+        property: "og:image:secure_url",
+        content: "https://www.dillonestrada.com/dewebdev.png"
+      },
+      {
+        hid: "og:image:alt",
+        property: "og:image:alt",
+        content: "Dillon Estrada - Web Developer & Designer"
       }
     ],
     link: [
