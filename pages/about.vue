@@ -119,8 +119,6 @@
 </template>
 
 <script>
-import YouTubeSlider from "../components/YouTubeSlider";
-
 export default {
   name: "About",
   data() {
@@ -129,19 +127,6 @@ export default {
       windowWidth: process.browser ? window.innerWidth : null,
     };
   },
-
-  components: {
-    YouTubeSlider,
-  },
-  // computed: {
-  //     vertical() {
-  //         if(this.windowSize > 850){
-  //             return true
-  //         } else {
-  //             return false
-  //         }
-  //     }
-  // },
   mounted() {
     if (process.browser) {
       this.$nextTick(() => {
@@ -150,13 +135,6 @@ export default {
     }
   },
   methods: {
-    // fixBit() {
-    //   try {
-    //     document.querySelector(".bit-widget").classList.add("bit-layout-ipad");
-    //   } catch (err) {
-    //     console.log(err);
-    //   }
-    // },
     onResize() {
       if (process.browser) {
         this.windowWidth = window.innerWidth;
