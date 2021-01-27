@@ -10,6 +10,7 @@
               variant="primary"
               :href="getLink(post.excerpt.rendered, 'site')"
               class="ml-3"
+              target="_blank"
               >Visit Site</b-button
             >
             <b-button
@@ -18,6 +19,7 @@
               variant="secondary"
               :href="getLink(post.excerpt.rendered, 'github')"
               class="ml-1"
+              target="_blank"
             >
               <font-awesome-icon
                 class="mr-2"
@@ -54,10 +56,6 @@ export default {
     this.$store.dispatch("getPosts");
   },
   methods: {
-    removeTags(string) {
-      const regex = /<.*?>/gi;
-      return string.replace(regex, "");
-    },
     getLink(string, linkName) {
       const regex = /<.*?>/gi;
       const links = string.replace(regex, "").split("|");

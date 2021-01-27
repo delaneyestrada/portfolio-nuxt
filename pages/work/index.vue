@@ -6,11 +6,6 @@
           <h1>My Work</h1>
           <div class="tags mt-3">
             <span>Filter: </span>
-            <!-- <b-badge @click="filterCards" class="music">Music</b-badge>
-            <b-badge @click="filterCards" class="e-commerce"
-              >E-Commerce</b-badge
-            >
-            <b-badge @click="filterCards" class="portfolio">Portfolio</b-badge> -->
             <b-badge
               @click="filterCards"
               class="mx-1"
@@ -36,7 +31,7 @@
                 <b-button
                   target="_blank"
                   variant="primary"
-                  :href="removeTags(post.excerpt.rendered)"
+                  :href="getLink(post.excerpt.rendered, 'site')"
                   >View Site</b-button
                 ><b-button :to="`/work/${post.slug}`">More Info</b-button>
               </div>
@@ -45,16 +40,6 @@
         </b-col>
       </b-row>
     </b-container>
-    <!-- <main>
-      <h2>Posts</h2>
-      <div class="post" v-for="post in posts" :key="post.id">
-        <h3>
-          <a :href="`work/${post.slug}`">{{ post.title.rendered }}</a>
-        </h3>
-        <div v-html="post.excerpt.rendered"></div>
-        <a :href="`work/${post.slug}`" class="readmore">Read more ⟶</a>
-      </div>
-    </main> -->
   </div>
 </template>
 
@@ -78,9 +63,17 @@ export default {
     this.$store.dispatch("getTags");
   },
   methods: {
-    removeTags(string) {
+    getLink(string, linkName) {
       const regex = /<.*?>/gi;
-      return string.replace(regex, "");
+      const links = string.replace(regex, "").split("|");
+      const linkMap = {
+        site: 0,
+        github: 1,
+      };
+      if (!links[linkMap[linkName]]) {
+        return false;
+      }
+      return links[linkMap[linkName]];
     },
     filterCards(e) {
       let el = e.target;
