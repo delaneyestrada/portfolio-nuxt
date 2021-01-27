@@ -1,84 +1,89 @@
 <template>
   <div id="app">
-    <div id="sidebar" ref="sidebar">
-      <!-- <div class="sidebar-logo">
-        <h1>Dillon Estrada</h1>
-      </div> -->
-      <b-nav :vertical="windowWidth > 575 ? true : false">
-        <b-nav-item to="/">
-          <span
-            class="nav-item-header"
-            v-show="windowWidth > 767 || windowWidth < 576"
-            >Home</span
-          >
-          <div class="icon">
-            <hr v-show="windowWidth > 767" />
-            <font-awesome-icon :icon="['fas', 'home']" />
-            <hr v-show="windowWidth > 767" />
-          </div>
-          <span class="nav-item-footer" v-show="windowWidth > 767"></span>
-        </b-nav-item>
-        <b-nav-item to="/work"
-          ><span
-            class="nav-item-header"
-            v-show="windowWidth > 767 || windowWidth < 576"
-            >Work</span
-          >
+    <b-overlay
+      opacity="1"
+      spinner-type="border"
+      spinner-variant="primary"
+      :show="!isLoaded"
+      z-index="101"
+    >
+      <div id="sidebar" ref="sidebar">
+        <b-nav :vertical="windowWidth > 575 ? true : false">
+          <b-nav-item to="/">
+            <span
+              class="nav-item-header"
+              v-show="windowWidth > 767 || windowWidth < 576"
+              >Home</span
+            >
+            <div class="icon">
+              <hr v-show="windowWidth > 767" />
+              <font-awesome-icon :icon="['fas', 'home']" />
+              <hr v-show="windowWidth > 767" />
+            </div>
+            <span class="nav-item-footer" v-show="windowWidth > 767"></span>
+          </b-nav-item>
+          <b-nav-item to="/work"
+            ><span
+              class="nav-item-header"
+              v-show="windowWidth > 767 || windowWidth < 576"
+              >Work</span
+            >
 
-          <div class="icon">
-            <hr v-show="windowWidth > 767" />
-            <font-awesome-icon :icon="['fas', 'laptop-code']" />
-            <hr v-show="windowWidth > 767" />
-          </div>
-          <span class="nav-item-footer" v-show="windowWidth > 767"
-            >View Case Studies</span
-          >
-        </b-nav-item>
-        <b-nav-item to="/about"
-          ><span
-            class="nav-item-header"
-            v-show="windowWidth > 767 || windowWidth < 576"
-            >About</span
-          >
-          <div class="icon">
-            <hr v-show="windowWidth > 767" />
-            <font-awesome-icon :icon="['fas', 'book']" />
-            <hr v-show="windowWidth > 767" />
-          </div>
-          <span class="nav-item-footer" v-show="windowWidth > 767"
-            >Who I Am</span
-          >
-        </b-nav-item>
-        <b-nav-item to="/contact"
-          ><span
-            class="nav-item-header"
-            v-show="windowWidth > 767 || windowWidth < 576"
-            >Contact</span
-          >
-          <div class="icon">
-            <hr v-show="windowWidth > 767" />
-            <font-awesome-icon :icon="['fas', 'envelope']" />
-            <hr v-show="windowWidth > 767" />
-          </div>
-          <span class="nav-item-footer" v-show="windowWidth > 767"
-            >Get In Touch</span
-          >
-        </b-nav-item>
-      </b-nav>
-      <div class="social-links" v-show="windowWidth > 575">
-        <a href="https://www.instagram.com/dillon_estrada/" target="_blank">
-          <font-awesome-icon :icon="['fab', 'instagram']"
-        /></a>
-        <a href="https://github.com/dillonestrada" target="_blank">
-          <font-awesome-icon :icon="['fab', 'github']"
-        /></a>
+            <div class="icon">
+              <hr v-show="windowWidth > 767" />
+              <font-awesome-icon :icon="['fas', 'laptop-code']" />
+              <hr v-show="windowWidth > 767" />
+            </div>
+            <span class="nav-item-footer" v-show="windowWidth > 767"
+              >View Case Studies</span
+            >
+          </b-nav-item>
+          <b-nav-item to="/about"
+            ><span
+              class="nav-item-header"
+              v-show="windowWidth > 767 || windowWidth < 576"
+              >About</span
+            >
+            <div class="icon">
+              <hr v-show="windowWidth > 767" />
+              <font-awesome-icon :icon="['fas', 'book']" />
+              <hr v-show="windowWidth > 767" />
+            </div>
+            <span class="nav-item-footer" v-show="windowWidth > 767"
+              >Who I Am</span
+            >
+          </b-nav-item>
+          <b-nav-item to="/contact"
+            ><span
+              class="nav-item-header"
+              v-show="windowWidth > 767 || windowWidth < 576"
+              >Contact</span
+            >
+            <div class="icon">
+              <hr v-show="windowWidth > 767" />
+              <font-awesome-icon :icon="['fas', 'envelope']" />
+              <hr v-show="windowWidth > 767" />
+            </div>
+            <span class="nav-item-footer" v-show="windowWidth > 767"
+              >Get In Touch</span
+            >
+          </b-nav-item>
+        </b-nav>
+        <div class="social-links" v-show="windowWidth > 575">
+          <a href="https://www.instagram.com/dillon_estrada/" target="_blank">
+            <font-awesome-icon :icon="['fab', 'instagram']"
+          /></a>
+          <a href="https://github.com/dillonestrada" target="_blank">
+            <font-awesome-icon :icon="['fab', 'github']"
+          /></a>
+        </div>
       </div>
-    </div>
-    <div class="main" :style="mainStyle">
-      <!-- <transition name="fade" mode="out-in"> -->
-      <Nuxt :windowSize="windowSize" :windowWidth="windowWidth" />
-      <!-- </transition> -->
-    </div>
+      <div class="main" :style="mainStyle">
+        <!-- <transition name="fade" mode="out-in"> -->
+        <Nuxt :windowSize="windowSize" :windowWidth="windowWidth" />
+        <!-- </transition> -->
+      </div>
+    </b-overlay>
   </div>
 </template>
 
@@ -91,6 +96,7 @@ export default {
       windowWidth: process.browser ? window.innerWidth : null,
       sidebarWidth: 0,
       sidebarHeight: 0,
+      isLoaded: false,
     };
   },
   computed: {
@@ -135,6 +141,7 @@ export default {
         this.sidebarWidth = this.$refs.sidebar.clientWidth;
         this.sidebarHeight = this.$refs.sidebar.clientHeight;
       });
+      this.isLoaded = true;
     }
   },
   updated() {

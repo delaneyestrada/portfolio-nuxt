@@ -1,7 +1,7 @@
 export const state = () => ({
   posts: [],
   tags: []
-})
+});
 
 // export const getters = {
 //     getterValue: state => {
@@ -11,44 +11,38 @@ export const state = () => ({
 
 export const mutations = {
   updatePosts: (state, posts) => {
-    state.posts = posts
+    state.posts = posts;
   },
   updateTags: (state, tags) => {
-    state.tags = tags
+    state.tags = tags;
   }
-}
+};
 
 export const actions = {
-  async getTags({
-    state,
-    commit
-  }) {
-    if (state.tags.length) return
+  async getTags({ state, commit }) {
+    if (state.tags.length) return;
     try {
-      let tags = await fetch(`https://wp.dillonestrada.xyz/wp-json/wp/v2/tags`)
-        .then(res => res.json())
-      tags = tags.map(({
+      let tags = await fetch(
+        `https://wp.dillonestrada.xyz/wp-json/wp/v2/tags`
+      ).then(res => res.json());
+      tags = tags.map(({ id, name }) => ({
         id,
         name
-      }) => ({
-        id,
-        name
-      }))
-      commit('updateTags', tags)
+      }));
+      commit("updateTags", tags);
     } catch (err) {
-      console.log(`error: ${err}`)
+      console.log(`error: ${err}`);
     }
   },
-  async getPosts({
-    state,
-    commit
-  }) {
-    if (state.posts.length) return
+  async getPosts({ state, commit }) {
+    if (state.posts.length) return;
     try {
-      let posts = await fetch(`https://wp.dillonestrada.xyz/wp-json/wp/v2/posts?page=1&per_page=20&categories=3&_embed`)
-        .then(res => res.json())
-      posts = posts.filter(el => el.status === "publish")
-        .map(({
+      let posts = await fetch(
+        `https://wp.dillonestrada.xyz/wp-json/wp/v2/posts?page=1&per_page=20&categories=3&_embed`
+      ).then(res => res.json());
+      posts = posts
+        .filter(el => el.status === "publish")
+        .map(({ id, slug, title, excerpt, _embedded, tags, content }) => ({
           id,
           slug,
           title,
@@ -56,19 +50,10 @@ export const actions = {
           _embedded,
           tags,
           content
-        }) => ({
-          id,
-          slug,
-          title,
-          excerpt,
-          _embedded,
-          tags,
-          content
-        }))
-      console.log(posts)
-      commit("updatePosts", posts)
+        }));
+      commit("updatePosts", posts);
     } catch (err) {
-      console.log(`error: ${err}`)
+      console.log(`error: ${err}`);
     }
   }
-}
+};

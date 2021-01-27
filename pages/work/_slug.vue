@@ -8,9 +8,21 @@
             <b-button
               squared
               variant="primary"
-              :href="removeTags(post.excerpt.rendered)"
+              :href="getLink(post.excerpt.rendered, 'site')"
               class="ml-3"
               >Visit Site</b-button
+            >
+            <b-button
+              v-if="getLink(post.excerpt.rendered, 'github')"
+              squared
+              variant="secondary"
+              :href="getLink(post.excerpt.rendered, 'github')"
+              class="ml-1"
+            >
+              <font-awesome-icon
+                class="mr-2"
+                :icon="['fab', 'github']"
+              />GitHub</b-button
             >
           </div>
           <div class="content">
@@ -45,6 +57,18 @@ export default {
     removeTags(string) {
       const regex = /<.*?>/gi;
       return string.replace(regex, "");
+    },
+    getLink(string, linkName) {
+      const regex = /<.*?>/gi;
+      const links = string.replace(regex, "").split("|");
+      const linkMap = {
+        site: 0,
+        github: 1,
+      };
+      if (!links[linkMap[linkName]]) {
+        return false;
+      }
+      return links[linkMap[linkName]];
     },
   },
 };
