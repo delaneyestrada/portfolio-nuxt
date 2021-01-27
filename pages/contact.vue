@@ -86,9 +86,11 @@ export default {
           },
         })
         .then(() => {
+          this.clearForm();
           this.showAlert();
         })
         .catch((e) => {
+          this.clearForm();
           this.showAlert();
         });
     },
