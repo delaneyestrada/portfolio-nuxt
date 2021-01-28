@@ -99,7 +99,7 @@
                     <div class="features-section" id="music-streaming">
                       <h4>Music Streaming</h4>
                       <div class="feature-info">
-                        <img src="@/static/bandsintownwidget.jpg" alt="" />
+                        <img src="@/static/streaming.png" alt="" />
                         <p>
                           Get a widget from almost any streaming music provider
                           you can think of to allow fans to preview your songs
