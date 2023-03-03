@@ -15,7 +15,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: "Dillon Estrada - Web Developer & Designer",
+    title: "Delaney Estrada - Web Developer & Designer",
     meta: [
       {
         charset: "utf-8"
@@ -28,18 +28,18 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "I am a full-stack web developer based in Austin, Texas with a love for creating websites and apps that are user friendly, fast, and search engine optimized."
+          "Meet Delaney, a software developer with a passion for web application development. With over three years of experience in the field, she has established herself as a skilled developer with a keen eye for detail and a dedication to quality."
       },
       {
         hid: "twitter:title",
         name: "twitter:title",
-        content: "Dillon Estrada - Web Developer & Designer"
+        content: "Delaney Estrada - Web Developer & Designer"
       },
       {
         hid: "twitter:description",
         name: "twitter:description",
         content:
-          "I am a full-stack web developer based in Austin, Texas with a love for creating websites and apps that are user friendly, fast, and search engine optimized."
+          "Meet Delaney, a software developer with a passion for web application development. With over three years of experience in the field, she has established herself as a skilled developer with a keen eye for detail and a dedication to quality."
       },
       {
         hid: "twitter:image",
@@ -49,18 +49,18 @@ export default {
       {
         hid: "twitter:image:alt",
         name: "twitter:image:alt",
-        content: "Dillon Estrada - Web Developer & Designer"
+        content: "Delaney Estrada - Web Developer & Designer"
       },
       {
         hid: "og:title",
         property: "og:title",
-        content: "Dillon Estrada - Web Developer & Designer"
+        content: "Delaney Estrada - Web Developer & Designer"
       },
       {
         hid: "og:description",
         property: "og:description",
         content:
-          "I am a full-stack web developer based in Austin, Texas with a love for creating websites and apps that are user friendly, fast, and search engine optimized."
+          "Meet Delaney, a software developer with a passion for web application development. With over three years of experience in the field, she has established herself as a skilled developer with a keen eye for detail and a dedication to quality."
       },
       {
         hid: "og:image",
@@ -75,7 +75,7 @@ export default {
       {
         hid: "og:image:alt",
         property: "og:image:alt",
-        content: "Dillon Estrada - Web Developer & Designer"
+        content: "Delaney Estrada - Web Developer & Designer"
       }
     ],
     link: [

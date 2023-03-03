@@ -236,8 +236,16 @@ export default {
     }
   }
 }
+
+body {
+  background-color: $body-bg;
+  color: $white;
+}
+.card {
+  background: $card-bg;
+}
 #sidebar {
-  background-color: darken($white, 3%);
+  background-color: $card-bg;
   padding: 0;
   z-index: 100;
 
@@ -249,10 +257,10 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: $dark;
+    color: $white;
 
     &:hover {
-      background-color: lighten($white, 5%);
+      background-color: lighten($black, 10%);
     }
     span {
       letter-spacing: 0.2em;
@@ -260,7 +268,7 @@ export default {
       text-transform: uppercase;
       &.nav-item-header {
         font-weight: 700;
-        color: lighten($dark, 15%);
+        color: lighten($white, 15%);
       }
     }
   }
@@ -302,9 +310,9 @@ export default {
           font-size: 3em;
         }
         margin: 0;
-        color: $dark;
+        color: $white;
         &:hover {
-          color: lighten($dark, 20%);
+          color: lighten($white, 20%);
         }
       }
     }
@@ -314,7 +322,7 @@ export default {
       flex-direction: column;
       text-align: center;
       padding: 2.5em 1em;
-      color: $dark;
+      color: $white;
 
       &:hover {
         background-color: lighten($white, 5%);
@@ -333,7 +341,7 @@ export default {
         &.nav-item-header {
           font-size: 1.5em;
           font-weight: 700;
-          color: lighten($dark, 15%);
+          color: lighten($white, 15%);
         }
       }
     }
@@ -378,7 +386,7 @@ hr {
   display: inline-block;
   width: 3em;
   margin: 0 0.4em;
-  border: 1px solid rgba(lighten($dark, 10%), 0.6);
+  border: 1px solid rgba(lighten($white, 10%), 0.6);
 }
 .page-enter-active,
 .page-leave-active {
