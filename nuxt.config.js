@@ -28,7 +28,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "I am a full-stack web developer based in Austin, Texas with a love for creating websites and apps that are user friendly, fast, and search engine optimized."
+          "Meet Delaney, a software developer with a passion for web application development. With over three years of experience in the field, she has established herself as a skilled developer with a keen eye for detail and a dedication to quality."
       },
       {
         hid: "twitter:title",
@@ -39,7 +39,7 @@ export default {
         hid: "twitter:description",
         name: "twitter:description",
         content:
-          "I am a full-stack web developer based in Austin, Texas with a love for creating websites and apps that are user friendly, fast, and search engine optimized."
+          "Meet Delaney, a software developer with a passion for web application development. With over three years of experience in the field, she has established herself as a skilled developer with a keen eye for detail and a dedication to quality."
       },
       {
         hid: "twitter:image",
@@ -60,7 +60,7 @@ export default {
         hid: "og:description",
         property: "og:description",
         content:
-          "I am a full-stack web developer based in Austin, Texas with a love for creating websites and apps that are user friendly, fast, and search engine optimized."
+          "Meet Delaney, a software developer with a passion for web application development. With over three years of experience in the field, she has established herself as a skilled developer with a keen eye for detail and a dedication to quality."
       },
       {
         hid: "og:image",
@@ -142,7 +142,11 @@ export default {
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    splitChunks: {
+      layouts: true
+    }
+  },
   generate: {
     routes: dynamicRoutes
   }
