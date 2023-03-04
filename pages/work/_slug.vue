@@ -73,6 +73,14 @@ export default {
 </script>
 
 <style lang="scss">
+.btn-primary {
+  background-color: $primary-light;
+  border-color: $primary;
+  &:hover {
+    background-color: $primary-dark;
+    border-color: $primary;
+  }
+}
 .wp-block-image img {
   width: 100%;
   height: auto;

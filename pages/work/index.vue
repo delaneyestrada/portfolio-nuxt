@@ -88,6 +88,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.btn-primary {
+  background-color: $primary-light;
+  border-color: $primary;
+}
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
