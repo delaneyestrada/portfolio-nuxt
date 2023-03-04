@@ -23,16 +23,18 @@
               </div>
             </a>
             <a href="/about" class="nav-item-home">
-              <span class="nav-item-header">About</span>
-              <div class="icon">
-                <hr />
-                <font-awesome-icon :icon="['fas', 'book']" />
-                <hr />
+              <div class="nav-item-container">
+                <span class="nav-item-header">About</span>
+                <div class="icon">
+                  <hr />
+                  <font-awesome-icon :icon="['fas', 'book']" />
+                  <hr />
+                </div>
+                <span class="nav-item-footer">Who I Am</span>
               </div>
-              <span class="nav-item-footer">Who I Am</span>
             </a>
-            <div class="nav-item-container">
-              <a href="/contact" class="nav-item-home">
+            <a href="/contact" class="nav-item-home">
+              <div class="nav-item-container">
                 <span class="nav-item-header">Contact</span>
                 <div class="icon">
                   <hr />
@@ -40,8 +42,8 @@
                   <hr />
                 </div>
                 <span class="nav-item-footer">Get In Touch</span>
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
           <div class="social-links">
             <a href="https://www.instagram.com/dillon_estrada/" target="_blank">
@@ -154,41 +156,58 @@ a {
 #nav-items {
   display: grid;
   gap: 3rem;
-  grid-template-columns: repeat(3, 1fr);
-}
 
+  margin: 4rem 1rem 1rem 1rem;
+}
+@media screen and (min-width: 767px) {
+  #nav-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  #nav-items {
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
 .nav-item-home {
   height: 100%;
   width: 100%;
-  padding: 3rem 1rem;
   color: $white;
   position: relative;
-
-  ::before {
-    content: "";
-    background-color: hsla(196, 61%, 58%, 0.75);
-    position: absolute;
-    left: 0;
-    bottom: 3px;
-    width: 100%;
-    height: 8px;
-    z-index: -1;
-    transition: all 0.3s ease-in-out;
-  }
-  :hover::before {
-    bottom: 0;
-    height: 100%;
-  }
 }
 
-.nav-item-container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.nav-item-home::before {
+  content: "";
+  background-color: $primary-light;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  opacity: 0;
+  z-index: -3;
+  transition: all 0.3s ease-in-out;
+}
+.nav-item-home:hover::before {
+  bottom: 0;
+  height: 100%;
+  opacity: 1;
+}
+
+.nav-item-home {
   cursor: pointer;
-  margin: 4rem 1rem 1rem 1rem;
   outline: lighten($black, 10%) 5px solid;
 
+  .nav-item-container {
+    height: 100%;
+    width: 100%;
+    padding: 3rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
   // &:hover {
   //   background-color: lighten($black, 10%);
   //   transition: all 0.25s ease;
@@ -238,61 +257,5 @@ a {
 .card {
   border: none !important;
   max-width: 780px;
-}
-
-.work-section {
-  @media screen and (min-width: 575px) {
-    display: grid;
-    grid-template-columns: minmax(320px, 50vw) 30%;
-    place-items: center;
-
-    .carousel-item {
-      .img-container {
-        position: relative;
-      }
-
-      img {
-        width: 700px;
-      }
-    }
-  }
-  @media screen and (max-width: 575px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .carousel {
-      width: 300px;
-    }
-    .carousel-item {
-      // .img-container {
-      //   display: flex;
-      //   justify-content: center;
-      // }
-      img {
-        width: 300px;
-      }
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    .btn {
-      max-width: 90%;
-    }
-  }
-
-  @media screen and (min-width: 767px) {
-    .btn {
-      max-width: 50%;
-    }
-  }
-
-  .work-text {
-    padding: 2em;
-    h3 {
-      font-family: $martel;
-      font-weight: 600;
-    }
-  }
 }
 </style>

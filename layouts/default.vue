@@ -325,7 +325,8 @@ body {
       color: $white;
 
       &:hover {
-        background-color: lighten($white, 5%);
+        transition: 0.5s ease;
+        background-color: lighten($black, 10%);
       }
       span {
         letter-spacing: 0.2em;
