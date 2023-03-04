@@ -5,7 +5,7 @@
         class="d-flex flex-column justify-content-around align-items-center main"
       >
         <div class="header">
-          <h1>Dillon Estrada</h1>
+          <h1>Delaney Estrada</h1>
           <h2>Welcome to my web development portfolio</h2>
         </div>
         <b-card no-body>

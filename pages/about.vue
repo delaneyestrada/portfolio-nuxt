@@ -10,106 +10,24 @@
               </div>
               <b-card class="mt-3">
                 <p class="about-text">
-                  I am a full-stack web developer based in Austin, Texas with a
-                  love for creating websites and apps that are user friendly,
-                  fast, and search engine optimized.
+                Delaney is a talented and experienced web developer, with a passion for creating dynamic and engaging websites. She has worked on a variety of projects, from large-scale enterprise applications to small, boutique websites.
                 </p>
-
                 <p class="about-text">
-                  Also being a professional musician, I am aware of the
-                  importance of tools that don't get in the way of your process;
-                  and that is what I hope to provide.
+As a Software Developer at United Supermarkets in Lubbock, Texas, Delaney hones her skills in ASP.NET and Microsoft SQL Server. She develops many forward-facing and internal web applications, leveraging her expertise to create powerful and intuitive user experiences. Her work is critical to the success of the company, and she is known for her attention to detail and her ability to deliver high-quality results on time and on budget.
                 </p>
-              </b-card>
-              <div class="header mt-5 mb-3">
-                <h1>What I Offer</h1>
-              </div>
-              <b-card no-body v-show="renderComponent">
-                <b-tabs
-                  card
-                  pills
-                  active-nav-item-class="active-nav-item"
-                  class="sub-nav"
-                >
-                  <b-tab title="Features" active>
-                    <div id="features">
-                      <div class="features-section" id="performance">
-                        <h4>Performance</h4>
-                        <div class="feature-info">
-                          <p>
-                            I make sure that all files are the smallest size
-                            possible to decrease load times for the people
-                            visiting your website.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="features-section" id="content-management">
-                        <h4>Content Management</h4>
-                        <div class="feature-info">
-                          <p>
-                            Using a CMS like Wordpress, I can design a website
-                            that will allow you to change, add, or remove
-                            content at will.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="features-section" id="ecommerce">
-                        <h4>Ecommerce</h4>
-
-                        <div class="feature-info">
-                          <p>
-                            Integrate an Ecommerce service such as Shopify or
-                            have me build a custom Ecommerce solution with
-                            payment handlers such as PayPal or Stripe.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </b-tab>
-                  <b-tab title="For Musicians">
-                    <div class="features-section" id="bandsintown">
-                      <h4>Bandsintown</h4>
-
-                      <div class="feature-info">
-                        <img src="@/static/bandsintownwidget.jpg" alt="" />
-
-                        <p>
-                          Integrate the
-                          <a
-                            href="https://artists.bandsintown.com/support/events-widget"
-                            target="_blank"
-                            >Bandsintown Widget</a
-                          >
-                          or a custom styled solution built using their API.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="features-section" id="youtube">
-                      <h4>YouTube</h4>
-                      <div class="feature-info">
-                        <img src="@/static/youtubeslider.png" alt="" />
-
-                        <p>
-                          Display as many YouTube videos you want in a creative
-                          user friendly way instead of just having them
-                          haphazardly thrown on your page.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="features-section" id="music-streaming">
-                      <h4>Music Streaming</h4>
-                      <div class="feature-info">
-                        <img src="@/static/streaming.png" alt="" />
-                        <p>
-                          Get a widget from almost any streaming music provider
-                          you can think of to allow fans to preview your songs
-                          and guide them to purchase or stream your songs.
-                        </p>
-                      </div>
-                    </div>
-                  </b-tab>
-                </b-tabs>
-              </b-card>
+                <p class="about-text">
+In addition to her work at United Supermarkets, Delaney has also pursued freelance web development, utilizing a range of technologies such as React, Next, Gatsby, Vue, and Nuxt. She has created websites with static HTML/CSS/JS as well as complex, dynamic applications that incorporate the latest web development tools and frameworks. She has also leveraged the power of Netlify CMS, Functions, and Hosting to create scalable and responsive websites that deliver exceptional user experiences.
+                </p>
+                <p class="about-text">
+Throughout her career, Delaney has also maintained her passion for music, and she has played drums and toured extensively across the US and Europe. This experience has given her a unique perspective and an appreciation for the importance of creativity and expression in web development. She approaches each project with a fresh perspective and a commitment to delivering the best possible user experience.
+                </p>
+                <p class="about-text">
+Previously, Delaney worked as a Software Developer at Gravity Laboratories, where she gained experience in full-stack web development in a React/AWS stack. She was responsible for integrating end-to-end tests to be used with a CI Pipeline, and she developed Node.js and Python AWS Lambda functions that interacted with AWS AppSync.
+                </p>
+                <p class="about-text">
+Delaney's passion for web development and her commitment to delivering exceptional user experiences have made her a valuable asset to any organization. She is a talented and innovative developer who is always eager to take on new challenges and push the boundaries of what is possible in web development.
+                </p>
+</b-card>
             </b-col>
           </b-row>
         </div>

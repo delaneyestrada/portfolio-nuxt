@@ -70,7 +70,7 @@
           </b-nav-item>
         </b-nav>
         <div class="social-links" v-show="windowWidth > 575">
-          <a href="https://www.instagram.com/dillon_estrada/" target="_blank">
+          <a href="https://www.instagram.com/delaylaylayney/" target="_blank">
             <font-awesome-icon :icon="['fab', 'instagram']"
           /></a>
           <a href="https://github.com/dillonestrada" target="_blank">

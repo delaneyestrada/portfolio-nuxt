@@ -15,7 +15,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: "Dillon Estrada - Web Developer & Designer",
+    title: "Delaney Estrada - Web Developer & Designer",
     meta: [
       {
         charset: "utf-8"
@@ -33,7 +33,7 @@ export default {
       {
         hid: "twitter:title",
         name: "twitter:title",
-        content: "Dillon Estrada - Web Developer & Designer"
+        content: "Delaney Estrada - Web Developer & Designer"
       },
       {
         hid: "twitter:description",
@@ -49,12 +49,12 @@ export default {
       {
         hid: "twitter:image:alt",
         name: "twitter:image:alt",
-        content: "Dillon Estrada - Web Developer & Designer"
+        content: "Delaney Estrada - Web Developer & Designer"
       },
       {
         hid: "og:title",
         property: "og:title",
-        content: "Dillon Estrada - Web Developer & Designer"
+        content: "Delaney Estrada - Web Developer & Designer"
       },
       {
         hid: "og:description",
@@ -75,7 +75,7 @@ export default {
       {
         hid: "og:image:alt",
         property: "og:image:alt",
-        content: "Dillon Estrada - Web Developer & Designer"
+        content: "Delaney Estrada - Web Developer & Designer"
       }
     ],
     link: [
