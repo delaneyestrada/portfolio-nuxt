@@ -46,7 +46,7 @@
             </a>
           </div>
           <div class="social-links">
-            <a href="https://www.instagram.com/dillon_estrada/" target="_blank">
+            <a href="https://www.instagram.com/delaylaylayney/" target="_blank">
               <font-awesome-icon :icon="['fab', 'instagram']"
             /></a>
             <a href="https://github.com/dillonestrada" target="_blank">
