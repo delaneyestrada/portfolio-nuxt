@@ -49,7 +49,7 @@
             <a href="https://www.instagram.com/delaylaylayney/" target="_blank">
               <font-awesome-icon :icon="['fab', 'instagram']"
             /></a>
-            <a href="https://github.com/dillonestrada" target="_blank">
+            <a href="https://github.com/delaneyestrada" target="_blank">
               <font-awesome-icon :icon="['fab', 'github']"
             /></a>
           </div>
@@ -103,13 +103,13 @@ export default {
       return this.$store.state.tags;
     },
     featured() {
-      let featuredTag = this.tags.find((el) => el.name === "featured");
+      let featuredTag = this.tags.find(el => el.name === "featured");
       if (featuredTag) {
-        return this.posts.filter((el) => el.tags.includes(featuredTag.id));
+        return this.posts.filter(el => el.tags.includes(featuredTag.id));
       } else {
         return null;
       }
-    },
+    }
   },
   created() {
     this.$store.dispatch("getPosts");
@@ -119,8 +119,8 @@ export default {
     removeTags(string) {
       const regex = /<.*?>/gi;
       return string.replace(regex, "");
-    },
-  },
+    }
+  }
 };
 </script>
 
