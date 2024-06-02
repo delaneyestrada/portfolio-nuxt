@@ -10,47 +10,22 @@
               </div>
               <b-card class="mt-3">
                 <p class="about-text">
-                  Meet Delaney, a software developer with a passion for web
-                  application development. With over three years of experience
-                  in the field, she has established herself as a skilled
-                  developer with a keen eye for detail and a dedication to
-                  quality.
+                  Hi there, I'm Delaney, a passionate software developer specializing in web application development. With over three years of experience, I've established myself as a skilled developer with a meticulous attention to detail and a commitment to excellence.
                 </p>
                 <p class="about-text">
-                  Delaney's journey in software development began in April 2020,
-                  where she started working as a freelance web developer. During
-                  this time, she honed her skills in creating websites using
-                  static HTML/CSS/JS and JavaScript frameworks such as React,
-                  Next, Gatsby, Vue, and Nuxt. She also became proficient in
-                  using Netlify CMS, Functions, and Hosting for most of her
-                  projects.
+                  My journey in software development began back in April 2020 when I ventured into freelance web development. It was here that I sharpened my skills in crafting websites using static HTML/CSS/JS and exploring dynamic frameworks like React, Next, Gatsby, Vue, and Nuxt. Additionally, I became proficient in leveraging Netlify CMS, Functions, and Hosting for most of my projects.
                 </p>
                 <p class="about-text">
-                  Delaney joined Gravity Laboratories in 2021, where she was a
-                  Web App Developer for seven months. During this time, she
-                  developed full-stack web applications using a React/AWS stack.
-                  She also integrated end-to-end tests to be used with a CI
-                  Pipeline and used Node.js and Python for AWS Lambda functions
-                  that interacted with AWS AppSync.
+                  In 2021, I joined Gravity Laboratories as a Web App Developer for seven months. During my time there, I focused on developing full-stack web applications using a React/AWS stack. I integrated end-to-end tests into CI Pipelines and utilized Node.js and Python for AWS Lambda functions interacting with AWS AppSync.
                 </p>
                 <p class="about-text">
-                  In January 2022, Delaney joined United Supermarkets, LLC as a
-                  Web Application Developer, where she is responsible for
-                  developing both forward-facing and internal web applications
-                  using ASP.NET (C#) with Microsoft SQL Server databases.
+                  Moving forward, in January 2022, I became part of United Supermarkets, LLC as a Web Application Developer. Here, I'm responsible for crafting both forward-facing and internal web applications using ASP.NET (C#) with Microsoft SQL Server databases.
                 </p>
                 <p class="about-text">
-                  Delaney is also a skilled drummer and percussionist and has
-                  been performing as a sideman since June 2012. This experience
-                  has helped her develop strong interpersonal skills, which she
-                  utilizes to collaborate with team members and clients to
-                  deliver successful projects.
+                  Outside of coding, I'm also a skilled drummer and percussionist, performing as a sideman since June 2012. This background has helped me cultivate strong interpersonal skills, crucial for collaborating with team members and clients to ensure project success.
                 </p>
                 <p class="about-text">
-                  Overall, Delaney is a highly skilled and versatile software
-                  developer with expertise in a variety of programming languages
-                  and frameworks. She is a valuable addition to any team and is
-                  dedicated to delivering high-quality software solutions.
+                  Overall, I pride myself on being a highly versatile software developer with expertise across various programming languages and frameworks. I bring value to any team I'm a part of and am committed to delivering top-notch software solutions.
                 </p>
               </b-card>
               <!-- <div class="header mt-5 mb-3">
