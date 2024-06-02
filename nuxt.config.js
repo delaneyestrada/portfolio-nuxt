@@ -2,7 +2,7 @@ import axios from "axios";
 let dynamicRoutes = () => {
   return axios
     .get(
-      `http://www.delaneyestrada.xyz/wp-json/wp/v2/posts?page=1&per_page=20&categories=3&_embed`
+      `http://www.delaneyestrada.xyz/wp-json/wp/v2/posts?page=1&per_page=20&categories=2&_embed`
     )
     .then(res => {
       return res.data.map(post => `/work/${post.slug}`);
